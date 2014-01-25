@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/marsz/lita-google-ranking.png?branch=master)](https://travis-ci.org/marsz/lita-google-ranking)
 
-Lita (robot) handler for querying RubyGems.org through official API gem (https://github.com/rubygems/gems).
+Lita (robot) handler for getting rank of DOMAIN on google web search with a KEYWORD.
 
 ## Installation
 
