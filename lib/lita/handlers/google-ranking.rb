@@ -16,7 +16,14 @@ module Lita
       }
       def gr(response)
         # raise response.matches.inspect
-        domain = response.matches.first.first
+
+        # domain alias support
+        if config(:default_domain)[:alias] == response.matches.first.first
+          domain = config(:default_domain)[:domain]
+        else
+          domain = response.matches.first.first
+        end
+
         keyword = response.matches.first[1]
         results = Google::Search::Web.new(:query => keyword, :safety_level => :off, :gl => config(:gl), :lr => config(:lr), :cr => config(:cr), :size => :large)
         rank = nil
