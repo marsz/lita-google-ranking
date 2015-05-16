@@ -26,6 +26,12 @@ config.handlers.google_ranking.cr = "countryTW"
 - `lr` : https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#languageCollections
 - `cr` : https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#countryCollections
 
+domain alias
+
+```
+config.handlers.google_ranking.domain_alias = { alias: "domain" , domain: "www.my.long.domain.name.com" }
+```
+
 ## Usage
 
 `lita gr DOMAIN KEYWORD` : send KEYWORD to google web search, and return rank of DOMAIN from search results
