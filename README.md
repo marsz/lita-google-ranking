@@ -17,9 +17,9 @@ gem "lita-google-ranking"
 in `lita_config.rb`
 
 ```
-config.google_ranking.gl = "tw"
-config.google_ranking.lr = "lang_zh"
-config.google_ranking.cr = "countryTW"
+config.handlers.google_ranking.gl = "tw"
+config.handlers.google_ranking.lr = "lang_zh"
+config.handlers.google_ranking.cr = "countryTW"
 ```
 
 - `gl` : http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
