@@ -13,7 +13,7 @@ module Lita
         # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#countryCollections
         config.cr = nil
         # domain alias
-        config.default_domain = nil
+        config.default_domain = {alias: nil, default_domain: nil }
       end      
 
       route /^gr\s+([^ ]+)\s+(.+)/i, :gr, :help => {
