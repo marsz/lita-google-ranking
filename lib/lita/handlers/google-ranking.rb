@@ -21,12 +21,7 @@ module Lita
         if config(:default_domain)[:alias] == response.matches.first.first
           domain = config(:default_domain)[:domain]
         else
-          if Lita.config.robot.adapter = :slack
-            match = response.matches.first.first.match /<http:\/\/[a-zA-Z.]*\|([a-zA-Z.]*)>/
-            domain = match.captures[0]
-          else
-            domain = response.matches.first.first
-          end
+          domain = response.matches.first.first
         end
 
         keyword = response.matches.first[1]
