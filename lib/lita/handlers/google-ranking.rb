@@ -5,16 +5,14 @@ module Lita
   module Handlers
     class GoogleRanking < Handler
 
-      def self.default_config(config)
-        # http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
-        config.gl = nil
-        # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#languageCollections
-        config.lr = nil
-        # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#countryCollections
-        config.cr = nil
-        # domain alias
-        config.default_domain = {alias: nil, default_domain: nil }
-      end      
+      # http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
+      config :gl, default: nil  
+      # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#languageCollections
+      config :lr, default: nil
+      # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#countryCollections
+      config :cr, default: nil
+      # domain alias
+      config :default_domain, default:  {alias: nil, default_domain: nil }
 
       route /^gr\s+([^ ]+)\s+(.+)/i, :gr, :help => {
         "gr DOMAIN KEYWORD" => "send KEYWORD to google web search, and return rank of DOMAIN from search results"
