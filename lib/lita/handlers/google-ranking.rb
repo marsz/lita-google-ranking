@@ -4,15 +4,12 @@ require "google-search"
 module Lita
   module Handlers
     class GoogleRanking < Handler
-
-      def self.default_config(config)
-        # http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
-        config.gl = nil
-        # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#languageCollections
-        config.lr = nil
-        # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#countryCollections
-        config.cr = nil
-      end      
+      # http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes
+      config :gl, type: String
+      # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#languageCollections
+      config :lr, type: String
+      # https://developers.google.com/custom-search/docs/xml_results?hl=en&csw=1#countryCollections
+      config :cr, type: String
 
       route /^gr\s+([^ ]+)\s+(.+)/i, :gr, :help => {
         "gr DOMAIN KEYWORD" => "send KEYWORD to google web search, and return rank of DOMAIN from search results"
