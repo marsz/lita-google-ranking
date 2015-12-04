@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-google-ranking"
-  spec.version       = "1.0.1"
+  spec.version       = "2.0.0"
   spec.authors       = ["marsz"]
   spec.email         = ["marsz330@gmail.com"]
   spec.description   = "fetch keyword ranking on google search for a domain"
