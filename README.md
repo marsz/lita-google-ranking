@@ -43,3 +43,4 @@ config.handlers.google_ranking.domain_alias = { alias: "domain" , domain: "www.m
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
+
